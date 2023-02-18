@@ -1,0 +1,25 @@
+{
+  "name": "sequelize-test",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": "https://github.com/aldairandre/sequelize-test.git",
+  "author": "aldairandre <aldairandre99@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": "18.12.1"
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "node ./server.js --watch"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.1.2",
+    "sequelize": "^6.28.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
