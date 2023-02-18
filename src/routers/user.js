@@ -12,7 +12,7 @@ const userRouters = Router();
 userRouters.get('/',getUsers);
 userRouters.get('/user/:id',getUser);
 userRouters.post('/create',createUser);
-userRouters.get('/',editUser);
+userRouters.patch('/edit/:id',editUser);
 userRouters.delete('/delete/:id',deleteUser);  
 
 export default userRouters;
