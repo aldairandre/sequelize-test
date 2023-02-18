@@ -1,7 +1,9 @@
 import dotenv from 'dotenv';
 import { Sequelize } from "sequelize";
+import { user } from './src/schemma/user.js';
 
-dotenv.config()
+
+dotenv.config();
 
 const sequelize = new Sequelize(
   process.env.MYSQL_DATABASE, 
@@ -13,4 +15,8 @@ const sequelize = new Sequelize(
   }
 );
 
-export default sequelize;
+const userSchema = sequelize.define('user',user);
+
+sequelize.sync();
+
+export { sequelize, userSchema } ;
