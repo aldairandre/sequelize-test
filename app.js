@@ -1,7 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
-import testdbControllers from './src/routers/testDB.js';
 import userRouters from './src/routers/user.js';
 
 const app = express();
@@ -13,7 +12,6 @@ app.use(bodyParser.json());
 
 // Route
 app.use('/user',userRouters);
-app.use('/test-db',testdbControllers);
 
 app.use((req,res,next) =>{
   const error = new Error('Nothing Here')
