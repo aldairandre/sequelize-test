@@ -1,23 +1,23 @@
-import { Sequelize } from "sequelize";
+import { DataTypes } from "sequelize"
 
 const user = {
   id : {
-    type : Sequelize.INTEGER,
+    type : DataTypes.INTEGER,
     autoIncrement : true,
     allowNull : false,
     primaryKey : true
   },
   name : {
-    type : Sequelize.STRING,
+    type : DataTypes.STRING,
     allowNull : false
   },
   email : {
-    type : Sequelize.STRING,
+    type : DataTypes.STRING,
     allowNull : false,
     unique : true
   },
   cell : {
-    type : Sequelize.INTEGER,
+    type : DataTypes.INTEGER,
     allowNull : false,
     unique : true
   }

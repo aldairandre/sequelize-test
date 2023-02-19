@@ -17,6 +17,6 @@ const sequelize = new Sequelize(
 
 const userSchema = sequelize.define('user',user);
 
-sequelize.sync();
+await sequelize.sync();
 
 export { sequelize, userSchema } ;
